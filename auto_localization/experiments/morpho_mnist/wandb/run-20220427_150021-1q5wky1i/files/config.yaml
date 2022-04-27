@@ -1,0 +1,135 @@
+wandb_version: 1
+
+_wandb:
+  desc: null
+  value:
+    cli_version: 0.10.22
+    framework: torch
+    is_jupyter_run: false
+    is_kaggle_kernel: false
+    python_version: 3.7.10
+    t:
+      1:
+      - 1
+      - 5
+      4: 3.7.10
+      5: 0.10.22
+      8:
+      - 5
+batch_size:
+  desc: null
+  value: 256
+dataset_config:
+  desc: null
+  value:
+    attribute_return: true
+    batch_size: 256
+    component_weighting:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    dataset_name: MorphoMNIST
+    indexed: true
+    inject_triplet_noise: 0.0
+    num_workers: 6
+    one_two_ratio: 0.0
+    single_feature_triplet: false
+    which_digits:
+    - 1
+epochs:
+  desc: null
+  value: 50
+gamma:
+  desc: null
+  value: 0.999
+group:
+  desc: null
+  value: test_004
+lambda_warmup_epochs:
+  desc: null
+  value: 1
+localization_config:
+  desc: null
+  value:
+    indexed: false
+    k: 1.0
+    latent_dim: 6
+    localizer_type: BayesianTriplet
+    maximum_likelihood_selection: false
+    normalization: 0
+    num_queries: 30
+    similarity_dim: 6
+    similarity_mode: true
+    trials: 20
+lr:
+  desc: null
+  value: 0.001
+mcmv_sampling:
+  desc: null
+  value: false
+model_config:
+  desc: null
+  value:
+    adam_beta_1: 0.9
+    adam_beta_2: 0.999
+    attributes:
+    - 0
+    - 1
+    - 2
+    - 3
+    - 4
+    - 5
+    bce: true
+    channels: 1
+    component_weighting:
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    - 1.0
+    d: 32
+    gradient_clipping: false
+    in_shape: 32
+    indexed: true
+    isotropic_variance: false
+    kl_beta: 0.01
+    l2_normalization: false
+    latent_dim: 6
+    layer_count: 4
+    loss_name: BayesianTripletLoss
+    masks: false
+    model_type: IsolatedVAE
+    recon_beta: 1.0
+    reconstructive_dim: 0
+    similarity_batchnorm: false
+    similarity_dim: 6
+    sub_loss_type: isolated
+    triplet_beta: 1.0
+    triplet_margin: 0.1
+    triplet_mining: false
+    uncertainty_constant: false
+optmizer_type:
+  desc: null
+  value: adam
+recon_warm_start:
+  desc: null
+  value: 1
+recon_zero_start:
+  desc: null
+  value: 0
+trainer:
+  desc: null
+  value: triplet
+trials:
+  desc: null
+  value: 1
+triplet_warm_start:
+  desc: null
+  value: 1
+weight_decay:
+  desc: null
+  value: 0.0

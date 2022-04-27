@@ -1,0 +1,261 @@
+Setup Model Config
+Setting Up Model
+IsolatedVAE(
+  (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv1_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv3_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv4_bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (similarity_mean_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (uncertainty_linear): Linear(in_features=1024, out_features=1, bias=True)
+  (similarity_batchnorm): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+  (similarity_logvar_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (reconstructive_mean_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (reconstructive_logvar_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (d1): Linear(in_features=6, out_features=1024, bias=True)
+  (deconv2): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv2_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv3): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv4): ConvTranspose2d(64, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv4_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv5): ConvTranspose2d(32, 1, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (loss_function): BayesianTripletLoss(margin=0.1000)
+)
+Setting Up Trianer
+Running Experiment
+Training Model
+Starting training ...
+../../../auto_localization/training/trainer.py:415: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+  with torch.autograd.detect_anomaly():
+  0%|          | 0/50 [00:00<?, ?it/s]/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+
+0it [00:00, ?it/s][A
+1it [00:31, 31.31s/it][A
+2it [00:31, 21.99s/it][A
+3it [00:31, 15.45s/it][A
+4it [00:31, 10.88s/it][A
+5it [00:32,  7.67s/it][A
+6it [00:32,  5.43s/it][A
+7it [00:32,  3.86s/it][A
+8it [00:32,  2.76s/it][A
+9it [00:32,  1.99s/it][A
+10it [00:33,  1.46s/it][A
+11it [00:33,  1.08s/it][A
+12it [00:33,  1.23it/s][A
+13it [00:33,  1.59it/s][A
+14it [00:33,  2.00it/s][A
+15it [00:34,  2.43it/s][A
+16it [00:34,  2.88it/s][A
+17it [00:34,  3.30it/s][A
+18it [00:34,  3.67it/s][A
+19it [00:34,  3.99it/s][A
+20it [00:35,  4.25it/s][A
+21it [00:35,  4.45it/s][A
+22it [00:35,  4.61it/s][A
+23it [00:35,  4.72it/s][A
+24it [00:35,  4.81it/s][A
+25it [00:36,  4.86it/s][A
+26it [00:36,  4.91it/s][A
+27it [00:36,  5.50it/s][A27it [00:36,  1.35s/it]
+  2%|▏         | 1/50 [03:32<2:53:54, 212.96s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  1.92it/s][A
+2it [00:00,  2.35it/s][A
+3it [00:00,  2.79it/s][A
+4it [00:01,  3.22it/s][A
+5it [00:01,  3.60it/s][A
+6it [00:01,  3.93it/s][A
+7it [00:01,  4.20it/s][A
+8it [00:01,  4.41it/s][A
+9it [00:02,  4.57it/s][A
+10it [00:02,  4.69it/s][A
+11it [00:02,  4.78it/s][A
+12it [00:02,  4.85it/s][A
+13it [00:02,  4.89it/s][A
+14it [00:03,  4.92it/s][A
+15it [00:03,  4.94it/s][A
+16it [00:03,  4.96it/s][A
+17it [00:03,  4.97it/s][A
+18it [00:03,  4.98it/s][A
+19it [00:04,  4.99it/s][A
+20it [00:04,  5.00it/s][A
+21it [00:04,  5.01it/s][A
+22it [00:04,  5.00it/s][A
+23it [00:04,  5.00it/s][A
+24it [00:05,  5.00it/s][A
+25it [00:05,  5.01it/s][A
+26it [00:05,  5.01it/s][A
+27it [00:05,  5.60it/s][A27it [00:05,  4.78it/s]
+  4%|▍         | 2/50 [06:34<2:42:55, 203.67s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  2.35it/s][A
+2it [00:00,  2.79it/s][A
+3it [00:00,  3.21it/s][A
+4it [00:01,  3.59it/s][A
+5it [00:01,  3.92it/s][A
+6it [00:01,  4.19it/s][A
+7it [00:01,  4.40it/s][A
+8it [00:01,  4.57it/s][A
+9it [00:02,  4.69it/s][A
+10it [00:02,  4.78it/s][A
+11it [00:02,  4.85it/s][A
+12it [00:02,  4.89it/s][A
+13it [00:02,  4.92it/s][A
+14it [00:03,  4.94it/s][A
+15it [00:03,  4.96it/s][A
+16it [00:03,  4.97it/s][A
+17it [00:03,  4.98it/s][A
+18it [00:03,  4.98it/s][A
+19it [00:04,  4.99it/s][A
+20it [00:04,  4.99it/s][A
+21it [00:04,  4.99it/s][A
+22it [00:04,  4.99it/s][A
+23it [00:04,  4.99it/s][A
+24it [00:05,  4.99it/s][A
+25it [00:05,  4.99it/s][A
+26it [00:05,  4.99it/s][A
+27it [00:05,  5.58it/s][A27it [00:05,  4.85it/s]
+  6%|▌         | 3/50 [09:36<2:34:18, 196.98s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  2.77it/s][A
+2it [00:00,  3.19it/s][A
+3it [00:00,  3.58it/s][A
+4it [00:00,  3.91it/s][A
+5it [00:01,  4.18it/s][A
+6it [00:01,  4.39it/s][A
+7it [00:01,  4.55it/s][A
+8it [00:01,  4.67it/s][A
+9it [00:01,  4.77it/s][A
+10it [00:02,  4.84it/s][A
+11it [00:02,  4.89it/s][A
+12it [00:02,  4.93it/s][A
+13it [00:02,  4.96it/s][A
+14it [00:02,  4.97it/s][A
+15it [00:03,  4.97it/s][A
+16it [00:03,  4.98it/s][A
+17it [00:03,  4.99it/s][A
+18it [00:03,  4.99it/s][A
+19it [00:03,  4.99it/s][A
+20it [00:04,  4.99it/s][A
+21it [00:04,  5.00it/s][A
+22it [00:04,  4.99it/s][A
+23it [00:04,  4.99it/s][A
+24it [00:04,  4.98it/s][A
+25it [00:05,  4.98it/s][A
+26it [00:05,  4.98it/s][A
+27it [00:05,  5.57it/s][A27it [00:05,  4.91it/s]
+  8%|▊         | 4/50 [12:37<2:27:22, 192.22s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  3.04it/s][A
+2it [00:00,  3.44it/s][A
+3it [00:00,  3.80it/s][A
+4it [00:00,  4.10it/s][A
+5it [00:01,  4.33it/s][A
+6it [00:01,  4.51it/s][A
+7it [00:01,  4.65it/s][A
+8it [00:01,  4.75it/s][A
+9it [00:01,  4.81it/s][A
+10it [00:02,  4.86it/s][A
+11it [00:02,  4.89it/s][A
+12it [00:02,  4.93it/s][A
+13it [00:02,  4.95it/s][A
+14it [00:02,  4.96it/s][A
+15it [00:03,  4.96it/s][A
+16it [00:03,  4.97it/s][A
+17it [00:03,  4.98it/s][A
+18it [00:03,  4.99it/s][A
+19it [00:03,  4.98it/s][A
+20it [00:04,  4.99it/s][A
+21it [00:04,  4.99it/s][A
+22it [00:04,  4.99it/s][A
+23it [00:04,  4.99it/s][A
+24it [00:04,  4.98it/s][A
+25it [00:05,  4.98it/s][A
+26it [00:05,  4.98it/s][A
+27it [00:05,  5.56it/s][A27it [00:05,  4.94it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 234, in test_additional_metrics
+    training_test.response_model_probability(self.model, self.data_manager.triplet_test, train=False, use_basic_setting=True)
+  File "../../../auto_localization/training/training_test.py", line 31, in response_model_probability
+    triplets = noise_model_selector.evaluate_triplets()
+  File "../../../auto_localization/localization/noise_model_selector.py", line 162, in evaluate_triplets
+    triplet = triplet_forward(self.model, triplet)
+  File "../../../auto_localization/localization/noise_model_selector.py", line 28, in triplet_forward
+    positive_mean, positive_logvar, _, _ = model.forward(positive.cuda())
+  File "../../../auto_localization/models/IsolatedVAE.py", line 293, in forward
+    mu, logvar = self.encode(x)
+  File "../../../auto_localization/models/IsolatedVAE.py", line 210, in encode
+    x = F.relu(getattr(self, "conv%d_bn" % (i + 1))(getattr(self, "conv%d" % (i + 1))(x)))
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/batchnorm.py", line 136, in forward
+    self.weight, self.bias, bn_training, exponential_average_factor, self.eps)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/functional.py", line 2058, in batch_norm
+    training, momentum, eps, torch.backends.cudnn.enabled
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 211, in extract_stack
+    stack = StackSummary.extract(walk_stack(f), limit=limit)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 359, in extract
+    linecache.checkcache(filename)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/linecache.py", line 74, in checkcache
+    stat = os.stat(fullname)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/ray/worker.py", line 832, in sigterm_handler
+    sys.exit(signum)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 115, in exit
+    self._orig_exit(orig_code)
+SystemExit: 15
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 239, in test_additional_metrics
+    reconstruction_of_metadata(self.model, self.data_manager.image_test, self.data_manager.metadata_test)
+  File "../../../auto_localization/training/training_test.py", line 98, in reconstruction_of_metadata
+    wandb.log({"metadata_reconstruction_error": difference})
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1027, in log
+    self.history._row_add(data)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 790, in _history_callback
+    row, step, publish_step=not_using_tensorboard
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 222, in publish_history
+    self._publish_history(history)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 206, in _publish_history
+    self._publish(rec)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 518, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+Traceback (most recent call last):
+  File "bayesian_triplet_experiment.py", line 107, in <module>
+    run_experiment(experiment_config)
+  File "bayesian_triplet_experiment.py", line 28, in run_experiment
+    basic_experiment.run()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 336, in run
+    self._train_model()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 156, in _train_model
+    self.trainer.train(epochs=self.experiment_config["epochs"])
+  File "../../../auto_localization/training/trainer.py", line 420, in train
+    test_loss = self.test_epoch(epoch=epoch)
+  File "../../../auto_localization/training/trainer.py", line 303, in test_epoch
+    wandb.log({"test_"+key:loss_dict[key], "epoch": epoch})
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 1027, in log
+    self.history._row_add(data)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_history.py", line 44, in _row_add
+    self._flush()
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_history.py", line 59, in _flush
+    self._callback(row=self._data, step=self._step)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/wandb_run.py", line 790, in _history_callback
+    row, step, publish_step=not_using_tensorboard
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 222, in publish_history
+    self._publish_history(history)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 206, in _publish_history
+    self._publish(rec)
+  File "/storage/home/hcoda1/9/ahelbling6/.local/lib/python3.7/site-packages/wandb/sdk/interface/interface.py", line 518, in _publish
+    raise Exception("The wandb backend process has shutdown")
+Exception: The wandb backend process has shutdown
+  8%|▊         | 4/50 [13:33<2:35:57, 203.42s/it]

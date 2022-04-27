@@ -1,0 +1,26 @@
+2022-04-27 14:03:57,362 INFO    MainThread:217997 [internal.py:wandb_internal():91] W&B internal server running at pid: 217997, started at: 2022-04-27 14:03:57.362125
+2022-04-27 14:03:57,364 DEBUG   HandlerThread:217997 [handler.py:handle_request():101] handle_request: check_version
+2022-04-27 14:03:57,364 INFO    WriterThread:217997 [datastore.py:open_for_write():77] open: /storage/scratch1/9/ahelbling6/oracle-guided-image-synthesis/auto_localization/experiments/morpho_mnist/wandb/run-20220427_140350-11cm0en0/run-11cm0en0.wandb
+2022-04-27 14:03:57,366 DEBUG   SenderThread:217997 [sender.py:send():161] send: header
+2022-04-27 14:03:57,366 DEBUG   SenderThread:217997 [sender.py:send():161] send: request
+2022-04-27 14:03:57,366 DEBUG   SenderThread:217997 [sender.py:send_request():170] send_request: check_version
+2022-04-27 14:03:57,454 DEBUG   SenderThread:217997 [sender.py:send():161] send: run
+2022-04-27 14:03:58,040 INFO    SenderThread:217997 [sender.py:_start_run_threads():638] run started: 11cm0en0 with start time 1651082630
+2022-04-27 14:03:58,040 DEBUG   SenderThread:217997 [sender.py:send():161] send: summary
+2022-04-27 14:03:58,041 INFO    SenderThread:217997 [sender.py:_save_file():769] saving file wandb-summary.json with policy end
+2022-04-27 14:03:58,042 DEBUG   HandlerThread:217997 [handler.py:handle_request():101] handle_request: run_start
+2022-04-27 14:04:38,599 WARNING MainThread:217997 [internal.py:wandb_internal():146] Internal process interrupt: 1
+2022-04-27 14:04:42,607 WARNING MainThread:217997 [internal.py:is_dead():344] Internal process exiting, parent pid 217206 disappeared
+2022-04-27 14:04:42,607 ERROR   MainThread:217997 [internal.py:wandb_internal():142] Internal process shutdown.
+2022-04-27 14:04:42,775 INFO    WriterThread:217997 [datastore.py:close():258] close: /storage/scratch1/9/ahelbling6/oracle-guided-image-synthesis/auto_localization/experiments/morpho_mnist/wandb/run-20220427_140350-11cm0en0/run-11cm0en0.wandb
+2022-04-27 14:04:42,776 INFO    SenderThread:217997 [sender.py:finish():872] shutting down sender
+2022-04-27 14:06:35,287 DEBUG   HandlerThread:217997 [meta.py:__init__():34] meta init
+2022-04-27 14:06:35,288 DEBUG   HandlerThread:217997 [meta.py:__init__():48] meta init done
+2022-04-27 14:06:35,288 DEBUG   HandlerThread:217997 [meta.py:probe():190] probe
+2022-04-27 14:06:35,296 DEBUG   HandlerThread:217997 [meta.py:_setup_git():180] setup git
+2022-04-27 14:06:35,335 DEBUG   HandlerThread:217997 [meta.py:_setup_git():187] setup git done
+2022-04-27 14:06:35,335 DEBUG   HandlerThread:217997 [meta.py:_save_pip():52] save pip
+2022-04-27 14:06:35,336 DEBUG   HandlerThread:217997 [meta.py:_save_pip():66] save pip done
+2022-04-27 14:06:35,336 DEBUG   HandlerThread:217997 [meta.py:probe():231] probe done
+2022-04-27 14:06:35,427 INFO    HandlerThread:217997 [handler.py:finish():535] shutting down handler
+2022-04-27 14:06:35,441 INFO    MainThread:217997 [internal.py:handle_exit():78] Internal process exited

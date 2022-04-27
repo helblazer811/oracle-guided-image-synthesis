@@ -1,0 +1,145 @@
+Setup Model Config
+Setting Up Model
+IsolatedVAE(
+  (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv1_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv3_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv4_bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (similarity_mean_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (uncertainty_linear): Linear(in_features=1024, out_features=1, bias=True)
+  (similarity_batchnorm): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+  (similarity_logvar_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (reconstructive_mean_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (reconstructive_logvar_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (d1): Linear(in_features=6, out_features=1024, bias=True)
+  (deconv2): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv2_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv3): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv4): ConvTranspose2d(64, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv4_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv5): ConvTranspose2d(32, 1, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (loss_function): BayesianTripletLoss(margin=0.1000)
+)
+Setting Up Trianer
+Running Experiment
+Training Model
+Starting training ...
+../../../auto_localization/training/cycle_consistency_trainer.py:411: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+  with torch.autograd.detect_anomaly():
+  0%|          | 0/50 [00:00<?, ?it/s]/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+
+0it [00:00, ?it/s][A
+1it [00:22, 22.57s/it][A
+2it [00:22, 15.88s/it][A
+3it [00:23, 11.19s/it][A
+4it [00:23,  7.90s/it][A
+5it [00:23,  5.59s/it][A
+6it [00:23,  3.98s/it][A
+7it [00:23,  2.85s/it][A
+8it [00:24,  2.06s/it][A
+9it [00:24,  1.51s/it][A
+10it [00:24,  1.13s/it][A
+11it [00:24,  1.17it/s][A
+12it [00:25,  1.50it/s][A
+13it [00:25,  1.88it/s][A
+14it [00:25,  2.28it/s][A
+15it [00:25,  2.67it/s][A
+16it [00:25,  3.04it/s][A
+17it [00:26,  3.37it/s][A
+18it [00:26,  3.65it/s][A
+19it [00:26,  3.87it/s][A
+20it [00:26,  3.66it/s][A
+21it [00:27,  3.86it/s][A
+22it [00:27,  4.03it/s][A
+23it [00:27,  4.16it/s][A
+24it [00:27,  4.27it/s][A
+25it [00:28,  4.34it/s][A
+26it [00:28,  4.39it/s][A
+27it [00:28,  3.44it/s][A27it [00:28,  1.06s/it]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/cycle_consistency_trainer.py", line 250, in test_additional_metrics
+    training_test.get_morpho_mnist_spearmans(self.model, self.data_manager)
+  File "../../../auto_localization/training/training_test.py", line 135, in get_morpho_mnist_spearmans
+    test_images = test_images.permute(1, 0, 2, 3)
+RuntimeError: number of dims don't match in permute
+  2%|▏         | 1/50 [03:34<2:54:52, 214.14s/it]
+0it [00:00, ?it/s][A
+1it [00:02,  2.75s/it][A
+2it [00:02,  1.99s/it][A
+3it [00:03,  1.46s/it][A
+4it [00:03,  1.09s/it][A
+5it [00:03,  1.21it/s][A
+6it [00:03,  1.56it/s][A
+7it [00:04,  1.94it/s][A
+8it [00:04,  2.35it/s][A
+9it [00:04,  2.76it/s][A
+10it [00:04,  3.14it/s][A
+11it [00:04,  3.48it/s][A
+12it [00:05,  3.76it/s][A
+13it [00:05,  3.98it/s][A
+14it [00:05,  4.16it/s][A
+15it [00:05,  4.29it/s][A
+16it [00:05,  4.39it/s][A
+17it [00:06,  4.46it/s][A
+18it [00:06,  4.51it/s][A
+19it [00:06,  4.54it/s][A
+20it [00:06,  4.57it/s][A
+21it [00:07,  4.58it/s][A
+22it [00:07,  4.59it/s][A
+23it [00:07,  4.60it/s][A
+24it [00:07,  4.61it/s][A
+25it [00:07,  4.61it/s][A
+26it [00:08,  4.61it/s][A
+27it [00:08,  4.60it/s][A27it [00:08,  3.22it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/cycle_consistency_trainer.py", line 245, in test_additional_metrics
+    training_test.response_model_probability(self.model, self.data_manager.triplet_test, use_basic_setting=True)
+  File "../../../auto_localization/training/training_test.py", line 31, in response_model_probability
+    triplets = noise_model_selector.evaluate_triplets()
+  File "../../../auto_localization/localization/noise_model_selector.py", line 162, in evaluate_triplets
+    triplet = triplet_forward(self.model, triplet)
+  File "../../../auto_localization/localization/noise_model_selector.py", line 27, in triplet_forward
+    anchor_mean, anchor_logvar, _, _ = model.forward(anchor.cuda())
+  File "../../../auto_localization/models/IsolatedVAE.py", line 293, in forward
+    mu, logvar = self.encode(x)
+  File "../../../auto_localization/models/IsolatedVAE.py", line 210, in encode
+    x = F.relu(getattr(self, "conv%d_bn" % (i + 1))(getattr(self, "conv%d" % (i + 1))(x)))
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 423, in forward
+    return self._conv_forward(input, self.weight)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 420, in _conv_forward
+    self.padding, self.dilation, self.groups)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 197, in format_stack
+    return format_list(extract_stack(f, limit=limit))
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 39, in format_list
+    return StackSummary.from_list(extracted_list).format()
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 385, in format
+    def format(self):
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bayesian_triplet_experiment.py", line 107, in <module>
+    run_experiment(experiment_config)
+  File "bayesian_triplet_experiment.py", line 28, in run_experiment
+    basic_experiment.run()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 336, in run
+    self._train_model()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 156, in _train_model
+    self.trainer.train(epochs=self.experiment_config["epochs"])
+  File "../../../auto_localization/training/cycle_consistency_trainer.py", line 416, in train
+    test_loss = self.test_epoch()
+  File "../../../auto_localization/training/cycle_consistency_trainer.py", line 294, in test_epoch
+    self.test_additional_metrics()
+  File "../../../auto_localization/training/cycle_consistency_trainer.py", line 245, in test_additional_metrics
+    training_test.response_model_probability(self.model, self.data_manager.triplet_test, use_basic_setting=True)
+KeyboardInterrupt
+  2%|▏         | 1/50 [05:21<4:22:19, 321.22s/it]

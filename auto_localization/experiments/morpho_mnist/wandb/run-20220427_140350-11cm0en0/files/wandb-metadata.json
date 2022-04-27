@@ -1,0 +1,26 @@
+{
+    "os": "Linux-3.10.0-1160.49.1.el7.x86_64-x86_64-with-redhat-7.9-Maipo",
+    "python": "3.7.10",
+    "heartbeatAt": "2022-04-27T18:06:35.288691",
+    "startedAt": "2022-04-27T18:03:50.072789",
+    "docker": null,
+    "gpu": "Quadro RTX 6000",
+    "gpu_count": 1,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "test_experiment_001"
+    ],
+    "state": "running",
+    "program": "bayesian_triplet_experiment.py",
+    "codePath": "auto_localization/experiments/morpho_mnist/bayesian_triplet_experiment.py",
+    "git": {
+        "remote": "https://github.com/helblazer811/oracle-guided-image-synthesis.git",
+        "commit": "0a628071ba86779fdeeecda4c3e7320b1169d253"
+    },
+    "email": "alechelbling1@gmail.com",
+    "root": "/storage/scratch1/9/ahelbling6/oracle-guided-image-synthesis",
+    "host": "atl1-1-03-006-17.pace.gatech.edu",
+    "username": "ahelbling6",
+    "executable": "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/bin/python"
+}

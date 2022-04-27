@@ -1,0 +1,43 @@
+2022-04-27 14:03:50,078 INFO    MainThread:217206 [wandb_setup.py:_flush():69] setting env: {}
+2022-04-27 14:03:50,079 INFO    MainThread:217206 [wandb_setup.py:_flush():69] setting login settings: {}
+2022-04-27 14:03:50,079 INFO    MainThread:217206 [wandb_init.py:_log_setup():334] Logging user logs to /storage/scratch1/9/ahelbling6/oracle-guided-image-synthesis/auto_localization/experiments/morpho_mnist/wandb/run-20220427_140350-11cm0en0/logs/debug.log
+2022-04-27 14:03:50,079 INFO    MainThread:217206 [wandb_init.py:_log_setup():335] Logging internal logs to /storage/scratch1/9/ahelbling6/oracle-guided-image-synthesis/auto_localization/experiments/morpho_mnist/wandb/run-20220427_140350-11cm0en0/logs/debug-internal.log
+2022-04-27 14:03:50,079 INFO    MainThread:217206 [wandb_init.py:init():367] calling init triggers
+2022-04-27 14:03:50,079 INFO    MainThread:217206 [wandb_init.py:init():374] wandb.init called with sweep_config: {}
+config: {'trials': 1, 'epochs': 50, 'lr': 0.001, 'batch_size': 256, 'trainer': 'cycle_consistency', 'weight_decay': 0.0, 'gamma': 0.999, 'optmizer_type': 'adam', 'lambda_warmup_epochs': 1, 'triplet_warm_start': 1, 'recon_warm_start': 1, 'recon_zero_start': 0, 'mcmv_sampling': False, 'group': 'test_experiment_001', 'localization_config': {'indexed': False, 'trials': 20, 'k': 1.0, 'localizer_type': 'BayesianTriplet', 'num_queries': 30, 'similarity_mode': True, 'similarity_dim': 6, 'normalization': 0, 'latent_dim': 6, 'maximum_likelihood_selection': False}, 'model_config': {'model_type': 'IsolatedVAE', 'latent_dim': 6, 'similarity_dim': 6, 'reconstructive_dim': 0, 'in_shape': 32, 'd': 32, 'layer_count': 4, 'channels': 1, 'loss_name': 'BayesianTripletLoss', 'sub_loss_type': 'isolated', 'masks': False, 'adam_beta_1': 0.9, 'adam_beta_2': 0.999, 'kl_beta': 0.01, 'recon_beta': 1.0, 'triplet_beta': 1.0, 'triplet_margin': 0.1, 'uncertainty_constant': False, 'similarity_batchnorm': False, 'triplet_mining': False, 'l2_normalization': False, 'attributes': [0, 1, 2, 3, 4, 5], 'component_weighting': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'isotropic_variance': False, 'bce': True, 'gradient_clipping': False, 'indexed': True}, 'dataset_config': {'component_weighting': [1.0, 1.0, 1.0, 1.0, 1.0, 1.0], 'attribute_return': True, 'which_digits': [1], 'one_two_ratio': 0.0, 'batch_size': 256, 'dataset_name': 'MorphoMNIST', 'indexed': True, 'num_workers': 6, 'single_feature_triplet': False, 'inject_triplet_noise': 0.0}}
+2022-04-27 14:03:50,080 INFO    MainThread:217206 [wandb_init.py:init():416] starting backend
+2022-04-27 14:03:50,080 INFO    MainThread:217206 [backend.py:_multiprocessing_setup():71] multiprocessing start_methods=fork,spawn,forkserver, using: spawn
+2022-04-27 14:03:50,086 INFO    MainThread:217206 [backend.py:ensure_launched():123] starting backend process...
+2022-04-27 14:03:50,101 INFO    MainThread:217206 [backend.py:ensure_launched():128] started backend process with pid: 217997
+2022-04-27 14:03:50,103 INFO    MainThread:217206 [wandb_init.py:init():421] backend started and connected
+2022-04-27 14:03:50,104 INFO    MainThread:217206 [wandb_init.py:init():461] updated telemetry
+2022-04-27 14:03:50,105 INFO    MainThread:217206 [wandb_init.py:init():480] communicating current version
+2022-04-27 14:03:55,105 INFO    MainThread:217206 [wandb_init.py:init():493] communicating run to backend with 30 second timeout
+2022-04-27 14:03:58,041 INFO    MainThread:217206 [wandb_init.py:init():518] starting run threads in backend
+2022-04-27 14:04:03,048 INFO    MainThread:217206 [wandb_run.py:_console_start():1480] atexit reg
+2022-04-27 14:04:03,049 INFO    MainThread:217206 [wandb_run.py:_redirect():1343] redirect: SettingsConsole.REDIRECT
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [wandb_run.py:_redirect():1348] Redirecting console.
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [redirect.py:install():213] install start
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [redirect.py:install():228] install stop
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [redirect.py:install():213] install start
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [redirect.py:install():228] install stop
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [wandb_run.py:_redirect():1394] Redirects installed.
+2022-04-27 14:04:03,050 INFO    MainThread:217206 [wandb_init.py:init():542] run started, returning control to user process
+2022-04-27 14:04:03,051 INFO    MainThread:217206 [wandb_run.py:_atexit_cleanup():1450] got exitcode: 1
+2022-04-27 14:04:03,051 INFO    MainThread:217206 [wandb_run.py:_restore():1422] restore
+2022-04-27 14:04:03,051 INFO    MainThread:217206 [redirect.py:uninstall():232] uninstall start
+2022-04-27 14:04:03,051 INFO    MainThread:217206 [redirect.py:_stop():287] _stop: stdout
+2022-04-27 14:04:03,051 INFO    stdout    :217206 [redirect.py:_pipe_relay():129] relay done saw last write: stdout
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:_stop():293] _stop closed: stdout
+2022-04-27 14:04:03,052 INFO    stdout    :217206 [redirect.py:_pipe_relay():145] relay done done: stdout
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:_stop():299] _stop joined: stdout
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:_stop():301] _stop rd closed: stdout
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:uninstall():236] uninstall done
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:uninstall():232] uninstall start
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:_stop():287] _stop: stderr
+2022-04-27 14:04:03,052 INFO    MainThread:217206 [redirect.py:_stop():293] _stop closed: stderr
+2022-04-27 14:04:03,053 INFO    stderr    :217206 [redirect.py:_pipe_relay():129] relay done saw last write: stderr
+2022-04-27 14:04:03,053 INFO    stderr    :217206 [redirect.py:_pipe_relay():145] relay done done: stderr
+2022-04-27 14:04:03,053 INFO    MainThread:217206 [redirect.py:_stop():299] _stop joined: stderr
+2022-04-27 14:04:03,053 INFO    MainThread:217206 [redirect.py:_stop():301] _stop rd closed: stderr
+2022-04-27 14:04:03,053 INFO    MainThread:217206 [redirect.py:uninstall():236] uninstall done

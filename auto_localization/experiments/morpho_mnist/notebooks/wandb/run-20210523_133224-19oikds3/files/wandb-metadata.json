@@ -1,0 +1,26 @@
+{
+    "os": "Linux-3.10.0-957.27.2.el7.x86_64-x86_64-with-redhat-7.6-Maipo",
+    "python": "3.7.10",
+    "heartbeatAt": "2021-05-23T17:32:38.284001",
+    "startedAt": "2021-05-23T17:32:24.617085",
+    "docker": null,
+    "gpu": "Quadro RTX 6000",
+    "gpu_count": 1,
+    "cpu_count": 24,
+    "cuda": null,
+    "args": [
+        "-f",
+        "/storage/home/hcoda1/9/ahelbling6/.local/share/jupyter/runtime/kernel-f510f566-65bd-4940-be43-8cf3068e6842.json"
+    ],
+    "state": "running",
+    "program": "<python with no main file>",
+    "git": {
+        "remote": "git@github.com:siplab-gt/latent-space-localization.git",
+        "commit": "7726f4d535fa08cc5279ffa3acb73aaf5b070dc6"
+    },
+    "email": "alechelbling1@gmail.com",
+    "root": "/storage/coda1/p-crozell3/0/ahelbling6/latent-space-localization",
+    "host": "atl1-1-03-006-13.pace.gatech.edu",
+    "username": "ahelbling6",
+    "executable": "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/bin/python"
+}

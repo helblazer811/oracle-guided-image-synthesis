@@ -1,0 +1,260 @@
+Setup Model Config
+Setting Up Model
+IsolatedVAE(
+  (conv1): Conv2d(1, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv1_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv2): Conv2d(32, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv2_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv3): Conv2d(64, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv3_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (conv4): Conv2d(128, 256, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (conv4_bn): BatchNorm2d(256, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (similarity_mean_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (uncertainty_linear): Linear(in_features=1024, out_features=1, bias=True)
+  (similarity_batchnorm): BatchNorm1d(6, eps=1e-05, momentum=0.1, affine=False, track_running_stats=True)
+  (similarity_logvar_linear): Linear(in_features=1024, out_features=6, bias=True)
+  (reconstructive_mean_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (reconstructive_logvar_linear): Linear(in_features=1024, out_features=0, bias=True)
+  (d1): Linear(in_features=6, out_features=1024, bias=True)
+  (deconv2): ConvTranspose2d(256, 128, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv2_bn): BatchNorm2d(128, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv3): ConvTranspose2d(128, 64, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv3_bn): BatchNorm2d(64, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv4): ConvTranspose2d(64, 32, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (deconv4_bn): BatchNorm2d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (deconv5): ConvTranspose2d(32, 1, kernel_size=(4, 4), stride=(2, 2), padding=(1, 1))
+  (loss_function): BayesianTripletLoss(margin=0.1000)
+)
+Setting Up Trianer
+Running Experiment
+Training Model
+Starting training ...
+../../../auto_localization/training/trainer.py:413: UserWarning: Anomaly Detection has been enabled. This mode will increase the runtime and should only be enabled for debugging.
+  with torch.autograd.detect_anomaly():
+  0%|          | 0/50 [00:00<?, ?it/s]/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/optim/lr_scheduler.py:136: UserWarning: Detected call of `lr_scheduler.step()` before `optimizer.step()`. In PyTorch 1.1.0 and later, you should call them in the opposite order: `optimizer.step()` before `lr_scheduler.step()`.  Failure to do this will result in PyTorch skipping the first value of the learning rate schedule. See more details at https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate
+  "https://pytorch.org/docs/stable/optim.html#how-to-adjust-learning-rate", UserWarning)
+
+0it [00:00, ?it/s][A
+1it [00:44, 44.31s/it][A
+2it [00:44, 31.10s/it][A
+3it [00:44, 21.83s/it][A
+4it [00:44, 15.34s/it][A
+5it [00:45, 10.80s/it][A
+6it [00:45,  7.62s/it][A
+7it [00:45,  5.39s/it][A
+8it [00:45,  3.84s/it][A
+9it [00:45,  2.75s/it][A
+10it [00:46,  1.98s/it][A
+11it [00:46,  1.45s/it][A
+12it [00:46,  1.07s/it][A
+13it [00:46,  1.23it/s][A
+14it [00:46,  1.59it/s][A
+15it [00:47,  2.00it/s][A
+16it [00:47,  2.44it/s][A
+17it [00:47,  2.88it/s][A
+18it [00:47,  3.30it/s][A
+19it [00:48,  3.67it/s][A
+20it [00:48,  3.99it/s][A
+21it [00:48,  4.25it/s][A
+22it [00:48,  4.43it/s][A
+23it [00:48,  4.59it/s][A
+24it [00:49,  4.70it/s][A
+25it [00:49,  4.78it/s][A
+26it [00:49,  4.84it/s][A
+27it [00:49,  4.00it/s][A27it [00:49,  1.84s/it]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 245, in test_additional_metrics
+    training_test.get_morpho_mnist_spearmans(self.model, self.data_manager)
+  File "../../../auto_localization/training/training_test.py", line 135, in get_morpho_mnist_spearmans
+    test_images = test_images.permute(1, 0, 2, 3)
+RuntimeError: number of dims don't match in permute
+  2%|▏         | 1/50 [03:54<3:11:30, 234.50s/it]
+0it [00:00, ?it/s][A
+1it [00:02,  2.03s/it][A
+2it [00:02,  1.50s/it][A
+3it [00:02,  1.11s/it][A
+4it [00:02,  1.20it/s][A
+5it [00:02,  1.55it/s][A
+6it [00:03,  1.95it/s][A
+7it [00:03,  2.39it/s][A
+8it [00:03,  2.83it/s][A
+9it [00:03,  3.25it/s][A
+10it [00:03,  3.62it/s][A
+11it [00:04,  3.95it/s][A
+12it [00:04,  4.21it/s][A
+13it [00:04,  4.41it/s][A
+14it [00:04,  4.56it/s][A
+15it [00:04,  4.68it/s][A
+16it [00:05,  4.77it/s][A
+17it [00:05,  4.83it/s][A
+18it [00:05,  4.86it/s][A
+19it [00:05,  4.89it/s][A
+20it [00:05,  4.92it/s][A
+21it [00:06,  4.93it/s][A
+22it [00:06,  4.95it/s][A
+23it [00:06,  4.96it/s][A
+24it [00:06,  4.97it/s][A
+25it [00:06,  4.97it/s][A
+26it [00:07,  4.97it/s][A
+27it [00:07,  5.05it/s][A27it [00:07,  3.70it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 245, in test_additional_metrics
+    training_test.get_morpho_mnist_spearmans(self.model, self.data_manager)
+  File "../../../auto_localization/training/training_test.py", line 135, in get_morpho_mnist_spearmans
+    test_images = test_images.permute(1, 0, 2, 3)
+RuntimeError: number of dims don't match in permute
+  4%|▍         | 2/50 [07:01<2:56:16, 220.35s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  2.14it/s][A
+2it [00:00,  2.58it/s][A
+3it [00:00,  3.01it/s][A
+4it [00:01,  3.42it/s][A
+5it [00:01,  3.78it/s][A
+6it [00:01,  4.07it/s][A
+7it [00:01,  4.31it/s][A
+8it [00:01,  4.50it/s][A
+9it [00:02,  4.63it/s][A
+10it [00:02,  4.73it/s][A
+11it [00:02,  4.80it/s][A
+12it [00:02,  4.85it/s][A
+13it [00:02,  4.89it/s][A
+14it [00:03,  4.91it/s][A
+15it [00:03,  4.94it/s][A
+16it [00:03,  4.95it/s][A
+17it [00:03,  4.95it/s][A
+18it [00:03,  4.95it/s][A
+19it [00:04,  4.97it/s][A
+20it [00:04,  4.98it/s][A
+21it [00:04,  4.97it/s][A
+22it [00:04,  4.97it/s][A
+23it [00:04,  4.97it/s][A
+24it [00:05,  4.98it/s][A
+25it [00:05,  4.98it/s][A
+26it [00:05,  4.98it/s][A
+27it [00:05,  5.57it/s][A27it [00:05,  4.81it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 245, in test_additional_metrics
+    training_test.get_morpho_mnist_spearmans(self.model, self.data_manager)
+  File "../../../auto_localization/training/training_test.py", line 135, in get_morpho_mnist_spearmans
+    test_images = test_images.permute(1, 0, 2, 3)
+RuntimeError: number of dims don't match in permute
+  6%|▌         | 3/50 [10:04<2:43:49, 209.15s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  3.77it/s][A
+2it [00:00,  4.07it/s][A
+3it [00:00,  4.30it/s][A
+4it [00:00,  4.48it/s][A
+5it [00:01,  4.61it/s][A
+6it [00:01,  4.72it/s][A
+7it [00:01,  4.80it/s][A
+8it [00:01,  4.86it/s][A
+9it [00:01,  4.90it/s][A
+10it [00:02,  4.92it/s][A
+11it [00:02,  4.94it/s][A
+12it [00:02,  4.96it/s][A
+13it [00:02,  4.97it/s][A
+14it [00:02,  4.97it/s][A
+15it [00:03,  4.97it/s][A
+16it [00:03,  4.97it/s][A
+17it [00:03,  4.98it/s][A
+18it [00:03,  4.98it/s][A
+19it [00:03,  4.98it/s][A
+20it [00:04,  4.98it/s][A
+21it [00:04,  4.99it/s][A
+22it [00:04,  4.98it/s][A
+23it [00:04,  4.98it/s][A
+24it [00:04,  4.99it/s][A
+25it [00:05,  3.96it/s][A
+26it [00:05,  4.20it/s][A
+27it [00:05,  4.81it/s][A27it [00:05,  4.82it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 245, in test_additional_metrics
+    training_test.get_morpho_mnist_spearmans(self.model, self.data_manager)
+  File "../../../auto_localization/training/training_test.py", line 135, in get_morpho_mnist_spearmans
+    test_images = test_images.permute(1, 0, 2, 3)
+RuntimeError: number of dims don't match in permute
+  8%|▊         | 4/50 [13:07<2:34:15, 201.21s/it]
+0it [00:00, ?it/s][A
+1it [00:00,  3.70it/s][A
+2it [00:00,  4.00it/s][A
+3it [00:00,  3.69it/s][A
+4it [00:01,  3.93it/s][A
+5it [00:01,  4.20it/s][A
+6it [00:01,  4.39it/s][A
+7it [00:01,  4.55it/s][A
+8it [00:01,  4.67it/s][A
+9it [00:02,  4.76it/s][A
+10it [00:02,  4.83it/s][A
+11it [00:02,  4.69it/s][A
+12it [00:02,  4.76it/s][A
+13it [00:02,  4.83it/s][A
+14it [00:03,  4.88it/s][A
+15it [00:03,  4.91it/s][A
+16it [00:03,  4.93it/s][A
+17it [00:03,  4.95it/s][A
+18it [00:03,  4.96it/s][A
+19it [00:04,  4.96it/s][A
+20it [00:04,  4.96it/s][A
+21it [00:04,  4.35it/s][A
+22it [00:04,  4.48it/s][A
+23it [00:04,  4.62it/s][A
+24it [00:05,  4.73it/s][A
+25it [00:05,  4.80it/s][A
+26it [00:05,  4.19it/s][A
+27it [00:05,  4.84it/s][A27it [00:05,  4.66it/s]
+Traceback (most recent call last):
+  File "../../../auto_localization/training/trainer.py", line 234, in test_additional_metrics
+    training_test.response_model_probability(self.model, self.data_manager.triplet_test, train=False, use_basic_setting=True)
+  File "../../../auto_localization/training/training_test.py", line 44, in response_model_probability
+    triplets = noise_model_selector.evaluate_triplets()
+  File "../../../auto_localization/localization/noise_model_selector.py", line 162, in evaluate_triplets
+    triplet = triplet_forward(self.model, triplet)
+  File "../../../auto_localization/localization/noise_model_selector.py", line 29, in triplet_forward
+    negative_mean, negative_logvar, _, _ = model.forward(negative.cuda())
+  File "../../../auto_localization/models/IsolatedVAE.py", line 300, in forward
+    return  mu, logvar, z, self.decode(z.view(-1, self.similarity_dim, 1, 1)),
+  File "../../../auto_localization/models/IsolatedVAE.py", line 287, in decode
+    x = F.leaky_relu(getattr(self, "deconv%d_bn" % (i + 1))(getattr(self, "deconv%d" % (i + 1))(x)), 0.2)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/module.py", line 727, in _call_impl
+    result = self.forward(*input, **kwargs)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/site-packages/torch/nn/modules/conv.py", line 929, in forward
+    output_padding, self.groups, self.dilation)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/traceback.py", line 193, in format_stack
+    def format_stack(f=None, limit=None):
+KeyboardInterrupt
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "bayesian_triplet_experiment.py", line 107, in <module>
+    run_experiment(experiment_config)
+  File "bayesian_triplet_experiment.py", line 28, in run_experiment
+    basic_experiment.run()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 336, in run
+    self._train_model()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 156, in _train_model
+    self.trainer.train(epochs=self.experiment_config["epochs"])
+  File "../../../auto_localization/training/trainer.py", line 418, in train
+    test_loss = self.test_epoch(epoch=epoch)
+  File "../../../auto_localization/training/trainer.py", line 295, in test_epoch
+    self.test_additional_metrics()
+  File "../../../auto_localization/training/trainer.py", line 234, in test_additional_metrics
+    training_test.response_model_probability(self.model, self.data_manager.triplet_test, train=False, use_basic_setting=True)
+KeyboardInterrupt
+  8%|▊         | 4/50 [15:31<2:58:35, 232.94s/it]
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/logging/__init__.py", line 894, in handle
+    self.emit(record)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/logging/__init__.py", line 1127, in emit
+    StreamHandler.emit(self, record)
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/logging/__init__.py", line 1029, in emit
+    self.flush()
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/logging/__init__.py", line 1009, in flush
+    self.stream.flush()
+KeyboardInterrupt
+Error in atexit._run_exitfuncs:
+Traceback (most recent call last):
+  File "/storage/home/hcoda1/9/ahelbling6/.conda/envs/latent/lib/python3.7/multiprocessing/popen_fork.py", line 28, in poll
+    pid, sts = os.waitpid(self.pid, flag)
+KeyboardInterrupt

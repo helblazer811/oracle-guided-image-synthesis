@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "bayesian_triplet_experiment.py", line 107, in <module>
+    run_experiment(experiment_config)
+  File "bayesian_triplet_experiment.py", line 24, in run_experiment
+    experiment_config=experiment_config
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 52, in __init__
+    self._setup()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 62, in _setup
+    self._setup_save_directory()
+  File "../../../auto_localization/experiment_management/basic_experiment.py", line 75, in _setup_save_directory
+    os.mkdir(save_dir_name)
+FileNotFoundError: [Errno 2] No such file or directory: '../../../auto_localization/logs/proud-cosmos-1827'
