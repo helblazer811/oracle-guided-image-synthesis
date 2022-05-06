@@ -1,6 +1,6 @@
-# [Oracle Guided Image Synthesis with Relative Queries](https://openreview.net/forum?id=rNh4AhVdPW5)
+# [Oracle Guided Image Synthesis with Relative Queries](https://arxiv.org/abs/2204.14189)
 
-This is a repository for my work on the paper ["Oracle Guided Image Synthesis with Relative Queries"](https://openreview.net/forum?id=rNh4AhVdPW5). 
+This is a repository for my work on the paper ["Oracle Guided Image Synthesis with Relative Queries"](https://arxiv.org/abs/2204.14189). 
 
 Paper: https://arxiv.org/abs/2204.14189
 
