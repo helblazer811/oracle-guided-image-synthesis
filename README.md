@@ -2,7 +2,8 @@
 
 This is a repository for my work on the paper ["Oracle Guided Image Synthesis with Relative Queries"](https://openreview.net/forum?id=rNh4AhVdPW5). 
 
-Link: https://openreview.net/forum?id=rNh4AhVdPW5
+Paper: https://arxiv.org/abs/2204.14189
+OpenReview: https://openreview.net/forum?id=rNh4AhVdPW5
 
 <img src="readme_images/explanatory_figure.png">
 
